@@ -1,0 +1,6 @@
+namespace: devops
+resources:
+- ./resources/deploy.yaml
+
+patchesStrategicMerge:
+- ./custom-env.yaml

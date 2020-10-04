@@ -1,0 +1,9 @@
+bases:
+  - ../base
+
+namespace: devops
+resources:
+- ./resources/ingress.yaml
+
+patchesStrategicMerge:
+- ./custom-ingress.yaml

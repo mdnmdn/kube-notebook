@@ -14,7 +14,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: devops-jupyter-svcacc
-  namespace: devops
+  #namespace: devops
   #apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole #this must be Role or ClusterRole
@@ -69,19 +69,3 @@ spec:
       port: 8888
       targetPort: jupyter-port
 
----
-apiVersion: networking.k8s.io/v1beta1
-kind: Ingress
-metadata:
-  name: devops-jupyter-ingr
-  #annotations:
-    #nginx.ingress.kubernetes.io/rewrite-target: /
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /
-        backend:
-          serviceName: devops-jupyter-svc
-          servicePort: 8888
-    
