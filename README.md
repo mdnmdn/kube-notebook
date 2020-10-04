@@ -1,6 +1,6 @@
 # kube-notebook
 
-Jupyter notebook for managing kubernetes operation
+Jupyter notebook for managing kubernetes operations
 
 
 ## Build docker image
